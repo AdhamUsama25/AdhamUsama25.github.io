@@ -1,0 +1,105 @@
+*{
+  font-family: Cairo;
+  text-align: center;
+  color: #ffffff;
+}
+body {
+  background-image: url(https://images.unsplash.com/photo-1605379399843-5870eea9b74e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1498&q=80);
+}
+
+header{
+  text-align: center;
+
+}
+
+section {
+  width: 80%;
+  box-shadow: -5px 5px 5px rgb(0 0 0 / 25%);
+  background-color: #2a2930;
+  border-radius:10px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: larger;
+}
+
+section:hover{
+    box-shadow: -10px 10px 10px rgb(0 0 0 / 50%);
+}
+
+
+
+table {
+  align-self: center;
+}
+
+td {
+  padding: 15px;
+}
+
+button {
+  color: #2a2930;
+  font-weight: bold;
+  background-color: #ffffff;
+  border: none;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+button:hover {
+  background-color: #f05454;
+  color: #ffffff;
+  box-shadow: -7px 7px 5px rgb(0 0 0 / 50%);
+}
+
+#skills td:hover {
+  color: #f05454;
+  text-shadow: -3px 3px 3px rgb(0 0 0 / 50%);
+}
+
+#exp :hover{
+    text-shadow: -3px 3px 3px rgb(0 0 0 / 50%);
+}
+
+
+#my_name {
+  margin-top: 200px;
+  font-size: 100px;
+  text-shadow: -5px 5px 5px rgb(0 0 0 / 25%);
+  margin-bottom: 0;
+}
+
+#work {
+  color: #f05454;
+  font-size: 30px;
+  margin-top: -30px;
+  text-shadow: -5px 5px 5px rgb(0 0 0 / 50%);
+}
+
+#skills{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#contacts_area {
+  text-align: center;
+}
+
+.white {
+  color: #ffffff;
+}
+
+.orange {
+  font-family: Cairo;
+  color: #f05454;
+}
+
+
+
+
+
+
+
+
+
+
+
