@@ -3,68 +3,29 @@
   <head>
     <meta charset="utf-8" />
     <title>Adham's website</title>
-    <style>
-      .center_text {
-        text-align: center;
-      }
-
-      body {
-        background-image: url(https://images.unsplash.com/photo-1605379399843-5870eea9b74e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1498&q=80);
-      }
-      td {
-        padding: 15px;
-      }
-
-      table {
-        color: #ffffff;
-        font-family: Cairo;
-        align-self: center;
-      }
-
-      .main_color {
-        font-family: Cairo;
-        color: #ffffff;
-      }
-
-      .orange {
-        font-family: Cairo;
-        color: #f05454;
-      }
-
-      .button_style {
-        font-family: Cairo;
-        color: #2a2930;
-        font-weight: bold;
-        background-color: #ffffff;
-        border: none;
-      }
-      .center {
-        margin-left: auto;
-        margin-right: auto;
-      }
-    </style>
+    <link rel="stylesheet" href="style.css">
   </head>
 
     <body>
-        <header class="main_color , center_text">
+        <header>
         
             <h1 id="my_name" title="My name">Adham Usama</h1>
 
-            <h2 style="font-weight: normal">
-            Front End <span class="orange"><strong> Developer</strong></span>...
+            <h2 id="work">
+            Front End <span class="main_color"><strong>Developer</strong></span>...
             </h2>
         </header>
 
         <!-- Contects -->
 
-        <div id="contacts_area" class="center_text">
+        <div id="contacts_area">
             <div id="contacts_buttonts">
                 <a
                 href="https://www.facebook.com/Adham.Usama25"
                 target="_blank"
                 title="Facebook"
                 >
-                    <button class="button_style">facebook</button>
+                    <button>facebook</button>
                 </a>
 
                 <a
@@ -72,7 +33,7 @@
                 target="_blank"
                 title="Twitter"
                 >
-                    <button class="button_style">Twitter</button>
+                    <button>Twitter</button>
                 </a>
 
                 <a
@@ -80,7 +41,7 @@
                 target="_blank"
                 title="Linked in"
                 >
-                    <button class="button_style">Linked In</button>
+                    <button>Linked In</button>
                 </a>
 
                 <a
@@ -88,25 +49,24 @@
                 target="_blank"
                 title="Github"
                 >
-                    <button class="button_style">Github</button>
+                    <button>Github</button>
                 </a>
 
                 <a href="https://codeforces.com/profile/Adham_Usama" target="_blank">
-                    <button class="button_style" title="Code Forces">Code Forces</button>
+                    <button title = "Code Forces">Code Forces</button>
                 </a>
-                <a href="mailto:adhamusama25+work@gmail.com">
-                    <button class="button_style">Email me</button>
+                <a href="mailto:adhamusama25@gmail.com">
+                    <button>Email me</button>
                 </a>
             </div>
         
         </div>
 
-        <!-- <hr /> -->
 
-        <section id="skills" title="My skills" class="center" style="background-color: #2a2930; width: 650px;">
-            <h3 class="main_color" style="text-align: center">My skills</h3>
-            <table class="center">
-                <div class="main_color">
+        <section id="skills_sec" title="My skills"">
+            <h3>My skills</h3>
+            <table id="skills">
+                <div>
                     <td>C++</td>
                     <td>Python</td>
                     <td>Kotlin</td>
@@ -119,12 +79,12 @@
         </section>
 
         <p>
-            <section id="Exp" title="My Experience" class="center" style="background-color: #2a2930; width: 650px;">
-                <h3 class="main_color" style="text-align: center">My Experience</h3>
+            <section id="exp_sec" title="My Experience">
+                <h3>My Experience</h3>
 
-                <table>
+                <table id="exp">
                     <tr>
-                        <td>intern at Storky app</td>
+                        <td><strong>intern at Storky app</strong></td>
                         <td> 2022 - present</td>
                     </tr>
                 </table>
