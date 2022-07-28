@@ -13,9 +13,9 @@ header{
 }
 
 section {
-  width: 80%;
+  width: 50%;
   box-shadow: -5px 5px 5px rgb(0 0 0 / 25%);
-  background-color: #2a2930;
+  background-color: rgba(42, 41, 48,0.9);
   border-radius:10px;
   margin-left: auto;
   margin-right: auto;
@@ -26,7 +26,10 @@ section:hover{
     box-shadow: -10px 10px 10px rgb(0 0 0 / 50%);
 }
 
-
+h3{
+  font-size: 30px;
+  margin-bottom: -25px;
+}
 
 table {
   align-self: center;
@@ -40,6 +43,7 @@ button {
   color: #2a2930;
   font-weight: bold;
   background-color: #ffffff;
+  border-radius: 5px;
   border: none;
   margin-right: 10px;
   margin-left: 10px;
@@ -60,6 +64,13 @@ button:hover {
     text-shadow: -3px 3px 3px rgb(0 0 0 / 50%);
 }
 
+#dev {
+  color: #f05454;
+  /* background-color: rgb(255, 255, 255,0.8);
+  padding: 0px 10px 0px;
+  border-radius: 12px;
+  text-shadow: none; */
+}
 
 #my_name {
   margin-top: 200px;
@@ -92,14 +103,3 @@ button:hover {
   font-family: Cairo;
   color: #f05454;
 }
-
-
-
-
-
-
-
-
-
-
-
