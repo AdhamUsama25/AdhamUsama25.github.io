@@ -1,0 +1,40 @@
+.Header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100px;
+
+  div {
+    margin: auto;
+    @apply container;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    height: 100%;
+
+    nav {
+      ul {
+        display: flex;
+        gap: 3rem;
+        li {
+          a {
+            &:hover {
+              font-weight: 700;
+              text-decoration: underline var(--primary-color) 2px;
+            }
+          }
+        }
+      }
+    }
+    // border: 1px solid red;
+  }
+}
+
+@media screen and (width < 640px) {
+  .Header {
+    div {
+      justify-content: center;
+    }
+  }
+}

@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root {
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+
+  --light-color: #F5F5F5;
+  --primary-color: #48CFCB;
+  --secondary-color: #424242;
+  --dark-primary-color: #229799;
+}
+
+html {
+  overflow-x: hidden;
+}
+body {
+  font-size: 16px;
+  width: 100vw;
+  accent-color: red;
+
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*::-moz-selection { /* Code for Firefox */
+  color:white;
+  background: var(--primary-color);
+}
+
+*::selection {
+  color:white;
+  background: var(--primary-color);
+}

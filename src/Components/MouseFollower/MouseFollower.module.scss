@@ -1,0 +1,9 @@
+.MouseFollower {
+  height: 400px;
+  width: 400px;
+  border-radius: 50%;
+  background-color: rgb( from var(--primary-color) r g b / 0.3);
+  z-index: -1;
+  @apply blur-3xl;
+
+}
