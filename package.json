@@ -2,9 +2,12 @@
   "name": "personal-website",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://AdhamUsama25.github.io/AdhamUsama25.github.io",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "start": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview"
