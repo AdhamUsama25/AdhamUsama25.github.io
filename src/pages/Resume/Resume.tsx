@@ -2,7 +2,11 @@ import ResumeContact from "../../Components/ResumeContact/ResumeContact";
 import contacts from "../../data/contacts.data";
 import ResumeInfoCard from "./ExperienceCard/ExperienceCard";
 import classes from "./Resume.module.scss";
-import { resumeWorkExperience,resumeEducation } from "../../data/resume.data";
+import {
+  resumeWorkExperience,
+  resumeEducation,
+  resumeSkills,
+} from "../../data/resume.data";
 const Resume = () => {
   return (
     <main className={classes.ResumePage}>
@@ -51,6 +55,18 @@ const Resume = () => {
           </div>
         </section>
 
+        <section id="skills" className={classes.ResumeSection}>
+          <h1 className={classes.SectionTitle}>Skills</h1>
+
+          <ul className={classes.Skills}>
+            {resumeSkills.map((skill, _idx) => (
+              <li key={_idx}>
+                <img src={skill.icon} alt={skill.name} />
+                <p>{skill.name}</p>
+              </li>
+            ))}
+          </ul>
+        </section>
       </div>
     </main>
   );

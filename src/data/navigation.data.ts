@@ -7,10 +7,10 @@ const navigation = [
         name: 'Resume',
         link: '/resume'
     },
-    {
-        name: 'Contact',
-        link: '/contact'
-    }
+    // {
+    //     name: 'Contact',
+    //     link: '/contact'
+    // }
 ];
 
 export default navigation;

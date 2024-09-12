@@ -10,3 +10,8 @@ export interface IResumeInfo {
   location: string;
   responsibilities?: string[];
 }
+
+export interface ISkill {
+  name: string;
+  icon: string;
+}
