@@ -28,11 +28,11 @@
 
         background-color: var(--light-color);
         padding: 4px 8px;
-        border-radius: 8px;
+        border-radius: 6px;
         transition: all 0.3s ease;
 
         &:hover {
-          background-color: var(--dark-primary-color);
+          background-color: var(--primary-color);
           color: white;
         }
       }

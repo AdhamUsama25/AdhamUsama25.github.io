@@ -3,28 +3,40 @@ import "./App.css";
 import Home from "./pages/home/Home";
 import Resume from "./pages/Resume/Resume";
 import Contact from "./pages/Contact/Contact";
-import MouseFollower from "./Components/MouseFollower/MouseFollower";
+import Layout from "./Components/UI/Layout/Layout";
 
 function App() {
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <Home />,
+      element: (
+        <Layout>
+          <Home />
+        </Layout>
+      ),
     },
     {
       path: "/contact",
-      element: <Contact />,
+      element: (
+        <Layout>
+          <Contact />
+        </Layout>
+      ),
     },
     {
       path: "/resume",
-      element: <Resume />,
+      element: (
+        <Layout>
+          <Resume />
+        </Layout>
+      ),
     },
   ]);
 
   return (
     <>
-      <MouseFollower />
-      <RouterProvider router={router} />;
+      <div className="background-decor">{"</>"}</div>
+      <RouterProvider router={router} />
     </>
   );
 }

@@ -1,15 +1,17 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import SocialMediaButton from "../../Components/SocialMediaButton/SocialMediaButton";
-import socialMedia from "../../data/socialMedia.data";
+import ContactButton from "../../Components/ContactButton/ContactButton";
+import contacts from "../../data/contacts.data";
 import classes from "./Home.module.scss";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
-import Header from "../../Components/Header/Header";
 
 const Home = () => {
+
+
+  const contactsToShow = contacts.filter((contact) => ["LinkedIn", "GitHub", "X"].includes(contact.name));
+
   return (
     <main className={classes.HomePage}>
-      <Header/>
       <div className={[classes.Content, "container"].join(" ")}>
         <div>
           <h1>
@@ -32,9 +34,9 @@ const Home = () => {
 
         <div>
           <ul>
-            {socialMedia.map((socialMedia, _idx) => (
+            {contactsToShow.map((contact, _idx) => (
               <li>
-                <SocialMediaButton key={_idx} socialMedia={socialMedia} />
+                <ContactButton key={_idx} contact={contact} />
               </li>
             ))}
           </ul>
