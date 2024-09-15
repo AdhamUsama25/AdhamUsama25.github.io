@@ -14,4 +14,6 @@ export interface IResumeInfo {
 export interface ISkill {
   name: string;
   icon: string;
+  proficiency?: string;
+  experience?: string;
 }

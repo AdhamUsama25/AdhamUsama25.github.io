@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import { IResumeInfo } from "../../../Types/resume.types";
-import classes from "./ExperienceCard.module.scss";
-const ResumeInfoCard = ({
+import classes from "./ResumeInfoViewer.module.scss";
+const ResumeInfoViewer = ({
   experience: info,
   isLast,
 }: {
@@ -19,9 +19,9 @@ const ResumeInfoCard = ({
   } = info;
   return (
     <div
-      className={classes.ExperienceCard}
+      className={classes.ResumeInfoViewer}
       style={{
-        borderLeft: isLast ? "none" : "2px dashed gray",
+        borderLeft: isLast ? "none" : "2px dashed var(--gray-color)",
       }}
     >
       <div>
@@ -70,4 +70,4 @@ const ResumeInfoCard = ({
   );
 };
 
-export default ResumeInfoCard;
+export default ResumeInfoViewer;

@@ -1,12 +1,13 @@
 import ResumeContact from "../../Components/ResumeContact/ResumeContact";
 import contacts from "../../data/contacts.data";
-import ResumeInfoCard from "./ExperienceCard/ExperienceCard";
+import ResumeInfoViewer from "./ResumeInfoViewer/ResumeInfoViewer";
 import classes from "./Resume.module.scss";
 import {
   resumeWorkExperience,
   resumeEducation,
   resumeSkills,
 } from "../../data/resume.data";
+import SkillCard from "../../Components/SkillCard/SkillCard";
 const Resume = () => {
   return (
     <main className={classes.ResumePage}>
@@ -26,7 +27,7 @@ const Resume = () => {
             <ul>
               <li>
                 {resumeWorkExperience.map((experience, _idx) => (
-                  <ResumeInfoCard
+                  <ResumeInfoViewer
                     key={_idx}
                     experience={experience}
                     isLast={_idx === resumeWorkExperience.length - 1}
@@ -44,10 +45,10 @@ const Resume = () => {
             <ul>
               <li>
                 {resumeEducation.map((education, _idx) => (
-                  <ResumeInfoCard
+                  <ResumeInfoViewer
                     key={_idx}
                     experience={education}
-                    isLast={_idx === resumeWorkExperience.length - 1}
+                    isLast={_idx === resumeEducation.length - 1}
                   />
                 ))}
               </li>
@@ -61,8 +62,7 @@ const Resume = () => {
           <ul className={classes.Skills}>
             {resumeSkills.map((skill, _idx) => (
               <li key={_idx}>
-                <img src={skill.icon} alt={skill.name} />
-                <p>{skill.name}</p>
+                <SkillCard skill={skill} />
               </li>
             ))}
           </ul>

@@ -35,6 +35,18 @@ export const resumeWorkExperience: IResumeInfo[] = [
       "- Communicated technical concepts to non-technical customers, facilitating a clear understanding of project functionality and new features.",
     ],
   },
+  {
+    organization: {
+      name: "StorkyApp",
+      logo: storkyLogo,
+      url: "https://storkyapp.com",
+    },
+    title: "Software Developer Intern",
+    startDate: "Jun 2022",
+    endDate: "Aug 2023",
+    location: "Tanta, Egypt",
+    responsibilities: [],
+  },
 ];
 
 export const resumeEducation: IResumeInfo[] = [
@@ -49,48 +61,68 @@ export const resumeEducation: IResumeInfo[] = [
     endDate: "Jul 2024",
     location: "Tanta, Egypt",
     responsibilities: [],
-  },
+  }
 ];
 
 export const resumeSkills: ISkill[] = [
   {
     name: "HTML",
     icon: HTML_icon,
+    proficiency: "Proficient",
+    experience: "2 years",
   },
   {
     name: "CSS",
     icon: CSS_icon,
+    proficiency: "Proficient",
+    experience: "2 years",
   },
   {
     name: "JavaScript",
     icon: JS_icon,
+    proficiency: "Proficient",
+    experience: "2 years",
   },
   {
     name: "TypeScript",
     icon: TS_icon,
+    proficiency: "Proficient",
+    experience: "2 years",
   },
   {
     name: "ReactJS",
     icon: React_icon,
+    proficiency: "Proficient",
+    experience: "2 years",
   },
   {
     name: "Redux",
     icon: Redux_icon,
+    proficiency: "Proficient",
+    experience: "2 years",
   },
   {
     name: "Sass",
     icon: Sass_icon,
+    proficiency: "Competent",
+    experience: "5 months",
   },
   {
     name: "Tailwind CSS",
     icon: Tailwind_icon,
+    proficiency: "Proficient",
+    experience: "5 months",
   },
   {
     name: "NodeJS",
     icon: NodeJS_icon,
+    proficiency: "Competent",
+    experience: "2 years",
   },
   {
     name: "ExpressJS",
     icon: Express_icon,
+    proficiency: "Competent",
+    experience: "2 years",
   },
 ];

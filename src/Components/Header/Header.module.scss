@@ -4,24 +4,53 @@
   left: 0;
   width: 100vw;
   height: 100px;
-
+  z-index: 1;
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0);
+  // box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: box-shadow 0.3s;
+  &:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.03);
+  }
   div {
     margin: auto;
     @apply container;
     display: flex;
-    justify-content: end;
+    justify-content: space-between;
     align-items: center;
     height: 100%;
+
+    .Logo {
+      height: 50%;
+      img {
+        height: 100%;
+      }
+    }
 
     nav {
       ul {
         display: flex;
         gap: 3rem;
+
         li {
           a {
+            &::after {
+              content: "";
+              display: block;
+              width: 0;
+              height: 2px;
+              background: var(--primary-color);
+              transition: width 0.2s;
+            }
             &:hover {
               font-weight: 700;
-              text-decoration: underline var(--primary-color) 2px;
+
+              &::after {
+                width: 100%;
+              }
             }
           }
         }
@@ -31,8 +60,18 @@
   }
 }
 
+@media screen and  (639px < width < 768px){
+  .Header {
+    padding: 0 3rem;
+  }
+}
+
 @media screen and (width < 640px) {
   .Header {
+
+    .Logo{
+      display: none;
+    }
     div {
       justify-content: center;
     }

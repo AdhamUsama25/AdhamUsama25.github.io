@@ -9,6 +9,7 @@ const ResumeContact = ({ contact }: ContactButtonProps) => {
   return (
     <div>
       <FontAwesomeIcon icon={contact.icon} />
+      
       <a
         href={contact.url}
         target="_blank"

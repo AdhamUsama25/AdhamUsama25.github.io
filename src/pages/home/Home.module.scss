@@ -74,7 +74,7 @@
   }
 }
 
-@media screen and (width < 1440px) {
+@media screen and (1023px < width < 1440px) {
   .HomePage {
     .Content {
       h1 {
@@ -91,7 +91,7 @@
   
 }
 
-@media screen and (width < 1024px) {
+@media screen and (767px < width < 1024px) {
   .HomePage {
     .Content {
       h1 {
@@ -108,7 +108,7 @@
   
 }
 
-@media screen and (width <768px) {
+@media screen and (639px < width <768px) {
   .HomePage {
     .Content {
       h1 {
