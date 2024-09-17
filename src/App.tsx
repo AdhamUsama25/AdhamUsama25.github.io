@@ -1,4 +1,7 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
 import "./App.css";
 import Home from "./pages/home/Home";
 import Resume from "./pages/Resume/Resume";
@@ -32,7 +35,7 @@ function App() {
       ),
     },
   ]);
-
+  
   return (
     <>
       <div className="background-decor">{"</>"}</div>

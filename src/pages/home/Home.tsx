@@ -4,11 +4,15 @@ import contacts from "../../data/contacts.data";
 import classes from "./Home.module.scss";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
-
+import useSound from "use-sound";
+import pageTurnSound from "../../assets/sounds/page-turn.mp3";
 const Home = () => {
 
-
-  const contactsToShow = contacts.filter((contact) => ["LinkedIn", "GitHub", "X"].includes(contact.name));
+  const contactsToShow = contacts.filter((contact) =>
+    ["LinkedIn", "GitHub", "X"].includes(contact.name)
+  );
+  
+  const [play] = useSound(pageTurnSound, { volume: 0.5 });
 
   return (
     <main className={classes.HomePage}>
@@ -27,8 +31,8 @@ const Home = () => {
           </p>
         </div>
 
-        <Link to="/resume" id="view-resume-link">
-          <p>View My Resume</p>{" "}
+        <Link to="/resume" id="view-resume-link" onClick={()=>play()}>
+          <p>View My Resume</p>
           <FontAwesomeIcon id="view-resume-link-arrow" icon={faArrowRight} />
         </Link>
 

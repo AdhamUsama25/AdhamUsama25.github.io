@@ -8,7 +8,9 @@ import {
   resumeSkills,
 } from "../../data/resume.data";
 import SkillCard from "../../Components/SkillCard/SkillCard";
+
 const Resume = () => {
+
   return (
     <main className={classes.ResumePage}>
       <div className={[classes.Content, "container"].join(" ")}>

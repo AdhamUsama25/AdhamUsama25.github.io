@@ -4,6 +4,8 @@
   align-items: center;
   height: 100%;
   height: 100vh;
+  animation: turn-page 0.5s forwards;
+
   .Content {
     h1 {
       font-size: 4rem;
@@ -155,5 +157,24 @@
         }
       }
     }
+  }
+}
+
+
+
+@-webkit-keyframes turn-page{
+  0% {
+    transform: translateX(-100vw);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes turn-page{
+  0% {
+    transform: translateX(-100vw);
+  }
+  100% {
+    transform: translateX(0);
   }
 }

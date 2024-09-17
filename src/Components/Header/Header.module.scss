@@ -37,6 +37,7 @@
 
         li {
           a {
+            opacity: 0.7;
             &::after {
               content: "";
               display: block;
@@ -46,7 +47,7 @@
               transition: width 0.2s;
             }
             &:hover {
-              font-weight: 700;
+              opacity: 1;
 
               &::after {
                 width: 100%;

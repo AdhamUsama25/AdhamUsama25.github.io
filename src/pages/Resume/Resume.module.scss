@@ -1,5 +1,8 @@
 .ResumePage {
   margin-top: 10rem;
+  animation: turn-page 0.5s forwards;
+
+  
 
   .Content {
     margin: 0 auto;
@@ -166,6 +169,24 @@
     }
   }
 }
+
+@-webkit-keyframes turn-page{
+  0% {
+    transform: translateX(100vw);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes turn-page{
+  0% {
+    transform: translateX(100vw);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
 @-webkit-keyframes slide-in-left {
   0% {
     -webkit-transform: translateX(-50px);
