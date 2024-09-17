@@ -94,7 +94,7 @@
       }
       .Date,
       .Location {
-        font-size: 1rem;
+        font-size: 0.8rem;
         font-weight: 400;
         color: var(--secondary-color);
       }
@@ -104,6 +104,61 @@
       font-weight: 400;
       color: var(--dark-secondary-color);
       margin-top: 1rem;
+    }
+  }
+
+  &.Dark {
+  
+   
+    .Avatar {
+      border: 3px solid var(--primary-color);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+  
+     
+    }
+  
+    .Details {
+  
+      &:hover {
+       
+  
+        .Description {
+          font-weight: 400;
+        }
+      }
+  
+      .Info {
+  
+        .Company {
+          font-weight: 600;
+          color: white;
+          transition: color 0.2s;
+  
+          &:hover {
+            color: var(--primary-color);
+          }
+        }
+        .Title {
+          font-weight: 300;
+          opacity: 0.9;
+          color: white;
+        }
+  
+        .Date {
+          margin-top: 6px;
+        }
+        .Date,
+        .Location {
+          font-weight: 200;
+          color: white;
+        }
+      }
+      .Description {
+        font-size: 0.9rem;
+        font-weight: 300;
+        color: var(--dark-secondary-color);
+        margin-top: 1rem;
+      }
     }
   }
 }

@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import { IResumeInfo } from "../../../Types/resume.types";
 import classes from "./ResumeInfoViewer.module.scss";
+import { useTheme } from "../../../ThemeContext";
 const ResumeInfoViewer = ({
   experience: info,
   isLast,
@@ -9,6 +10,7 @@ const ResumeInfoViewer = ({
   isLast: boolean;
 }) => {
   const companyLogoRef = useRef<HTMLDivElement>(null);
+  const isDark = useTheme();
   const {
     organization,
     title,
@@ -19,7 +21,7 @@ const ResumeInfoViewer = ({
   } = info;
   return (
     <div
-      className={classes.ResumeInfoViewer}
+      className={[classes.ResumeInfoViewer, isDark && classes.Dark].join(" ")}
       style={{
         borderLeft: isLast ? "none" : "2px dashed var(--gray-color)",
       }}

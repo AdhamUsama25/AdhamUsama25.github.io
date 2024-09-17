@@ -2,8 +2,6 @@
   margin-top: 10rem;
   animation: turn-page 0.5s forwards;
 
-  
-
   .Content {
     margin: 0 auto;
 
@@ -16,17 +14,13 @@
       li {
         div {
           display: flex;
+          color: var(--secondary-color);
           svg {
             margin-right: 10px;
             font-size: 1.5rem;
-            color: var(--secondary-color);
-            transition: all 0.1s;
+            transition: width 0.1s;
           }
           a {
-            transition: all 1s;
-            text-decoration-color: var(--primary-color);
-            text-decoration-thickness: 2px;
-
             &::after {
               content: "";
               display: block;
@@ -39,7 +33,6 @@
 
           &:hover {
             a {
-              color: var(--secondary-color);
               &::after {
                 width: 100%;
               }
@@ -78,6 +71,37 @@
     gap: 3rem;
 
     margin-bottom: 10rem;
+  }
+
+  &.Dark {
+    .Content {
+      .Contacts {
+        li {
+          div {
+            svg {
+              color: white;
+              transition: color 0.2s;
+            }
+            a {
+              color: white;
+              font-weight: 300;
+            }
+
+            &:hover {
+              svg {
+                color: var(--primary-color);
+              }
+            }
+          }
+        }
+      }
+
+      .ResumeSection {
+        .SectionTitle {
+          font-weight: 500;
+        }
+      }
+    }
   }
 }
 
@@ -120,8 +144,6 @@
 
 @media screen and (width <= 768px) {
   .ResumePage {
-   
-
     .ResumeSection {
       .SectionTitle {
         font-size: 1.5rem !important;
@@ -170,7 +192,7 @@
   }
 }
 
-@-webkit-keyframes turn-page{
+@-webkit-keyframes turn-page {
   0% {
     transform: translateX(100vw);
   }
@@ -178,7 +200,7 @@
     transform: translateX(0);
   }
 }
-@keyframes turn-page{
+@keyframes turn-page {
   0% {
     transform: translateX(100vw);
   }

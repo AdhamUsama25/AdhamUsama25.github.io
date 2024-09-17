@@ -2,13 +2,16 @@ import classes from "./SkillCard.module.scss";
 import { ISkill } from "../../Types/resume.types";
 import wooshSound from "../../assets/sounds/Woosh.wav";
 import useSound from "use-sound";
+import { useTheme } from "../../ThemeContext";
 
 const SkillCard = ({ skill }: { skill: ISkill }) => {
-
-  const [play] = useSound(wooshSound,{volume: 0.5});
-
+  const [play] = useSound(wooshSound, { volume: 0.3 });
+  const isDark = useTheme();
   return (
-    <div className={classes.SkillCard} onMouseEnter={()=>play()}>
+    <div
+      className={[classes.SkillCard, isDark && classes.Dark].join(" ")}
+      onMouseEnter={() => play()}
+    >
       <div className={classes.Content}>
         <img src={skill.icon} alt={skill.name} />
         <div className={classes.Details}>

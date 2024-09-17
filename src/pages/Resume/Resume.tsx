@@ -8,11 +8,13 @@ import {
   resumeSkills,
 } from "../../data/resume.data";
 import SkillCard from "../../Components/SkillCard/SkillCard";
+import { useTheme } from "../../ThemeContext";
 
 const Resume = () => {
+  const isDark = useTheme();
 
   return (
-    <main className={classes.ResumePage}>
+    <main className={[classes.ResumePage, isDark&& classes.Dark].join(" ")}>
       <div className={[classes.Content, "container"].join(" ")}>
         <ul className={classes.Contacts}>
           {contacts.map((contact, _idx) => (

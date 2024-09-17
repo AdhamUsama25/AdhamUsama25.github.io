@@ -27,8 +27,7 @@
 
       span {
         white-space: nowrap;
-
-        background-color: var(--light-color);
+        background-color: lightgray;
         padding: 4px 8px;
         border-radius: 6px;
         transition: all 0.3s ease;
@@ -74,6 +73,37 @@
       }
     }
   }
+
+  &.Dark {
+    .Content {
+      p {
+        font-weight: 400;
+        span {
+          background-color: var(--dark-primary-color);
+          &:hover {
+
+            background-color: var(--primary-color);
+          }
+        }
+      }
+
+      ul {
+        display: flex;
+        gap: 2rem;
+
+        a {
+          svg {
+            font-size: 1.5rem;
+            transition: all 0.2s ease;
+
+            &:hover {
+              color: var(--primary-color);
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 @media screen and (1023px < width < 1440px) {
@@ -90,7 +120,6 @@
       }
     }
   }
-  
 }
 
 @media screen and (767px < width < 1024px) {
@@ -107,7 +136,6 @@
       }
     }
   }
-  
 }
 
 @media screen and (639px < width <768px) {
@@ -160,9 +188,7 @@
   }
 }
 
-
-
-@-webkit-keyframes turn-page{
+@-webkit-keyframes turn-page {
   0% {
     transform: translateX(-100vw);
   }
@@ -170,7 +196,7 @@
     transform: translateX(0);
   }
 }
-@keyframes turn-page{
+@keyframes turn-page {
   0% {
     transform: translateX(-100vw);
   }

@@ -6,4 +6,8 @@
   z-index: -1;
   @apply blur-3xl;
 
+  &.Dark {
+     background-color: rgb( from var(--gray-color) r g b / 0.05);
+    
+  }
 }

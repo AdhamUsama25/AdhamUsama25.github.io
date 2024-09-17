@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 import classes from "./MouseFollower.module.scss";
+import { useTheme } from "../../ThemeContext";
 
 const MouseFollower = () => {
+  const isDark = useTheme();
   const [position, setPosition] = useState({ x: 0, y: 0 });
 
   useEffect(() => {
@@ -19,7 +21,7 @@ const MouseFollower = () => {
   return (
     <div
       style={{ position: "fixed", top: position.y, left: position.x }}
-      className={classes.MouseFollower}
+      className={[classes.MouseFollower,isDark && classes.Dark].join(" ")}
     ></div>
   );
 };

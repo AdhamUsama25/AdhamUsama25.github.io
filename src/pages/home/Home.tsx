@@ -6,16 +6,18 @@ import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 import useSound from "use-sound";
 import pageTurnSound from "../../assets/sounds/page-turn.mp3";
+import { useTheme } from "../../ThemeContext";
 const Home = () => {
+  const isDark = useTheme();
 
   const contactsToShow = contacts.filter((contact) =>
     ["LinkedIn", "GitHub", "X"].includes(contact.name)
   );
-  
+
   const [play] = useSound(pageTurnSound, { volume: 0.5 });
 
   return (
-    <main className={classes.HomePage}>
+    <main className={[classes.HomePage, isDark && classes.Dark].join(" ")}>
       <div className={[classes.Content, "container"].join(" ")}>
         <div>
           <h1>
@@ -31,7 +33,7 @@ const Home = () => {
           </p>
         </div>
 
-        <Link to="/resume" id="view-resume-link" onClick={()=>play()}>
+        <Link to="/resume" id="view-resume-link" onClick={() => play()}>
           <p>View My Resume</p>
           <FontAwesomeIcon id="view-resume-link-arrow" icon={faArrowRight} />
         </Link>
