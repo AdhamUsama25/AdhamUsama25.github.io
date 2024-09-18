@@ -1,11 +1,11 @@
 const navigation = [
     {
         name: 'Home',
-        link: '/'
+        link: ''
     },
     {
         name: 'Resume',
-        link: '/resume'
+        link: 'resume'
     },
     // {
     //     name: 'Contact',

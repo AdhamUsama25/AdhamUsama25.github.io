@@ -41,7 +41,7 @@ const Home = () => {
         <div>
           <ul>
             {contactsToShow.map((contact, _idx) => (
-              <li>
+              <li key={_idx}>
                 <ContactButton key={_idx} contact={contact} />
               </li>
             ))}

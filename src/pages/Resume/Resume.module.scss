@@ -66,11 +66,13 @@
   }
 
   .Skills {
+    max-width: fit-content;
+    margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 3rem;
-
     margin-bottom: 10rem;
+    justify-content: center;
   }
 
   &.Dark {
@@ -104,13 +106,28 @@
     }
   }
 }
+@media screen and (width <= 1535px) {
+  .ResumePage {
+    .Skills {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+    }
+  }
+}
+@media screen and (width <= 1280px) {
+  .ResumePage {
+    .Skills {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+  }
+}
 
 @media screen and (width <= 1024px) {
   .ResumePage {
     .Contacts {
       margin: 0 auto;
       display: grid !important;
-      grid-template-columns: repeat(3, 1fr);
       gap: 1rem !important;
       li {
         div {
@@ -134,7 +151,6 @@
     }
 
     .Skills {
-      grid-template-columns: repeat(3, 1fr);
       gap: 1rem;
       margin: 0;
       margin-bottom: 10rem;
@@ -155,7 +171,7 @@
       grid-template-columns: repeat(2, 1fr);
       justify-content: center;
       justify-items: center;
-      gap: 1rem;
+      gap: 0.5rem;
       margin: 0;
       margin-bottom: 10rem;
     }

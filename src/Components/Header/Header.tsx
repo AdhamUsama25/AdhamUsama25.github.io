@@ -1,4 +1,4 @@
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import navigation from "../../data/navigation.data";
 import classes from "./Header.module.scss";
 import myLogo from "../../assets/AU.svg";
@@ -10,17 +10,18 @@ import { faMoon } from "@fortawesome/free-solid-svg-icons";
 import { useTheme, useThemeUpdate } from "../../ThemeContext";
 import { faLightbulb } from "@fortawesome/free-regular-svg-icons";
 const Header = () => {
-  const location = useLocation();
-  console.log(location.pathname);
+  const location = window.location.href;
+  const locationArray = location.split("/");
+  const path = locationArray[locationArray.length - 1];
+  const isHome = path === "";
   const [play] = useSound(pageTurnSound, { volume: 0.5 });
   const [playLightsSound] = useSound(lightsSound, {
     volume: 0.5,
     sprite: {
-     lightsOn: [0, 1000],
+      lightsOn: [0, 1000],
       lightsOff: [2100, 1000],
-    }
+    },
   });
-
 
   const isDark = useTheme();
   const toggleDarkTheme = useThemeUpdate();
@@ -30,23 +31,35 @@ const Header = () => {
     playLightsSound({ id: isDark ? "lightsOn" : "lightsOff" });
   };
 
+  const handleLogoClick = () => {
+    if (!isHome) play();
+  };
+
   return (
     <header className={[classes.Header, isDark && classes.Dark].join(" ")}>
       <div className={classes.HeaderContent}>
-        <Link to={"/"} className={classes.Logo} title="Adham Usama">
+        <Link
+          to={"/"}
+          className={classes.Logo}
+          title="Adham Usama"
+          onClick={handleLogoClick}
+        >
           <img src={myLogo} alt="Adham Usama"></img>
         </Link>
         <div className={classes.Actions}>
-          <button onClick={handleThemeChange} title={isDark? "Light mode":"Dark mode"}>
+          <button
+            onClick={handleThemeChange}
+            title={isDark ? "Light mode" : "Dark mode"}
+          >
             <FontAwesomeIcon icon={isDark ? faLightbulb : faMoon} />
           </button>
           <nav>
             <ul>
               {navigation.map(
                 (nav, _idx) =>
-                  nav.link !== location.pathname && (
+                  nav.link !== path && (
                     <li key={_idx}>
-                      <Link to={nav.link} onClick={() => play()}>
+                      <Link to={"/" + nav.link} onClick={() => play()}>
                         {nav.name}
                       </Link>
                     </li>
