@@ -18,7 +18,7 @@ const Resume = () => {
       <div className={[classes.Content, "container"].join(" ")}>
         <ul className={classes.Contacts}>
           {contacts.map((contact, _idx) => (
-            <li>
+            <li key={_idx}>
               <ResumeContact key={_idx} contact={contact} />
             </li>
           ))}

@@ -29,8 +29,11 @@
 
 html {
   overflow-x: hidden;
+  min-width: 360px;
+
 }
 body {
+  min-width: 360px;
   font-size: 16px;
   width: 100vw;
   accent-color: red;

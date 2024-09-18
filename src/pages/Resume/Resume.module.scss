@@ -9,7 +9,7 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 50px;
+      gap: 3rem;
 
       li {
         div {
@@ -106,104 +106,131 @@
     }
   }
 }
-@media screen and (width <= 1535px) {
+// 320px, 480px, 768px, 1024px, and 1200px
+
+@media (width < 1500px) {
   .ResumePage {
+    .Content {
+      .Contacts {
+        justify-content: center;
+        gap: 2rem;
+      }
+    }
+
     .Skills {
       grid-template-columns: repeat(4, 1fr);
-      gap: 2rem;
     }
   }
 }
-@media screen and (width <= 1280px) {
+
+@media (1280px <= width <= 1600px) or (1023px <= width <= 1060px) or (767px <= width <= 800px) or (width < 670px) {
   .ResumePage {
+    .Content {
+      width: 90%;
+    }
+  }
+}
+
+@media (width < 1280px) {
+  .ResumePage {
+    .Content {
+      .Contacts {
+        gap: 2rem;
+      }
+    }
+
     .Skills {
       grid-template-columns: repeat(3, 1fr);
-      gap: 2rem;
     }
   }
 }
-
-@media screen and (width <= 1024px) {
+@media (width <= 900px) {
   .ResumePage {
-    .Contacts {
-      margin: 0 auto;
-      display: grid !important;
-      gap: 1rem !important;
-      li {
-        div {
-          display: flex;
-          flex-wrap: nowrap !important;
+    .Content {
+      .Contacts {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 90%;
+        margin: 0 auto;
+        gap: 1rem;
 
-          svg {
-            height: 1.2rem;
+        
+      }
+    }
+    .Skills {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+@media (width <= 580px) {
+  .ResumePage {
+   
+    .Skills {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 1rem;
+    }
+  }
+}
+@media (width <= 600px) {
+  .ResumePage {
+    .Content {
+      .Contacts {
+        li {
+          div {
+            gap: 0.25rem;
+            svg {
+              font-size: 1.2rem;
+            }
+            a {
+              font-size: 0.8rem;
+            }
           }
-          a {
-            font-size: 0.8rem;
+        }
+      }
+      .ResumeSection {
+        margin-top: 1rem;
+        .SectionTitle {
+          font-size: 1.5rem;
+          font-weight: 700;
+          margin-bottom: 3rem;
+
+          &::after {
+            content: "";
+            display: block;
+            width: 50px;
+            height: 0.5rem;
+            background-color: var(--primary-color);
+            margin-top: 10px;
           }
         }
       }
     }
 
-    .ResumeSection {
-      .SectionTitle {
-        font-size: 1.75rem !important;
-      }
-    }
-
-    .Skills {
-      gap: 1rem;
-      margin: 0;
-      margin-bottom: 10rem;
-    }
-  }
-}
-
-@media screen and (width <= 768px) {
-  .ResumePage {
-    .ResumeSection {
-      .SectionTitle {
-        font-size: 1.5rem !important;
-        margin-bottom: 2.25rem !important;
-      }
-    }
-
-    .Skills {
-      grid-template-columns: repeat(2, 1fr);
-      justify-content: center;
-      justify-items: center;
-      gap: 0.5rem;
-      margin: 0;
-      margin-bottom: 10rem;
-    }
-  }
-}
-
-@media screen and (width <= 430px) {
-  .ResumePage {
-    margin: 8rem 0 0;
-    .Contacts {
-      width: 90%;
-      display: grid !important;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1rem !important;
-    }
-
-    .ResumeSection {
-      width: 90%;
-      margin: 0 auto;
-      .SectionTitle {
-        font-size: 1rem !important;
-        margin-bottom: 2rem !important;
-      }
-    }
-
     .Skills {
       grid-template-columns: repeat(1, 1fr);
-      justify-content: center;
-      justify-items: center;
-      gap: 1rem;
-      margin: 0;
-      margin-bottom: 10rem;
+    }
+  }
+}
+@media (width <= 360px) {
+  .ResumePage {
+    margin-top: 7rem;
+    .Content {
+      .Contacts {
+        display: block;
+
+        li {
+          margin-bottom: 0.5rem;
+          div {
+            gap: 0.25rem;
+            svg {
+              font-size: 1.2rem;
+            }
+            a {
+              font-size: 0.8rem;
+            }
+          }
+        }
+      }
     }
   }
 }

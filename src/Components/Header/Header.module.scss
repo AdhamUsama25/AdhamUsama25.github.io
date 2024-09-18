@@ -92,19 +92,24 @@
   }
 }
 
-@media screen and (639px < width < 768px) {
+@media (width < 700px) {
   .Header {
-    padding: 0 3rem;
-  }
-}
 
-@media screen and (width < 640px) {
-  .Header {
-    .Logo {
-      display: none;
-    }
-    div {
+
+    .HeaderContent {
+      display: flex;
       justify-content: center;
+      width: 100%;
+
+      .Logo {
+        display: none;
+      }
+      .Actions {
+        width: 90%;
+        max-width: unset;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+      }
     }
   }
 }
