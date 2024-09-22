@@ -16,7 +16,7 @@ export const resumeWorkExperience: IResumeInfo[] = [
   {
     organization: {
       name: "StorkyApp",
-      logo: storkyLogo,
+      logo: "",
       url: "https://storkyapp.com",
     },
     title: "Software Developer",
@@ -36,7 +36,7 @@ export const resumeWorkExperience: IResumeInfo[] = [
   {
     organization: {
       name: "StorkyApp",
-      logo: storkyLogo,
+      logo: "",
       url: "https://storkyapp.com",
     },
     title: "Software Developer Intern",
