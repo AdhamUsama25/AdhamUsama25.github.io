@@ -1,5 +1,4 @@
 import { ISkill, type IResumeInfo } from "../Types/resume.types";
-import facultyLogo from "../assets/logos/Faculty of Engineering - Tanta University Logo.png";
 import HTML_icon from "../assets/Skills/HTML.svg";
 import CSS_icon from "../assets/Skills/CSS.png";
 import JS_icon from "../assets/Skills/JS.png";
@@ -54,7 +53,7 @@ export const resumeEducation: IResumeInfo[] = [
     organization: {
       name: "Faculty of Engineering - Tanta University",
       url: "https://eng.tanta.edu.eg/",
-      logo: facultyLogo,
+      logo: "",
     },
     title: "Bachelor of Computer Engineering & Automatic Control",
     startDate: "Sep 2019",
