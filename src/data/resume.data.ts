@@ -1,5 +1,4 @@
 import { ISkill, type IResumeInfo } from "../Types/resume.types";
-import storkyLogo from "../assets/logos/StorkyApp logo.png";
 import facultyLogo from "../assets/logos/Faculty of Engineering - Tanta University Logo.png";
 import HTML_icon from "../assets/Skills/HTML.svg";
 import CSS_icon from "../assets/Skills/CSS.png";
