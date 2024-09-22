@@ -3,6 +3,7 @@ import HTML_icon from "../assets/Skills/HTML.svg";
 import CSS_icon from "../assets/Skills/CSS.png";
 import JS_icon from "../assets/Skills/JS.png";
 import TS_icon from "../assets/Skills/TS.png";
+import NextIcon from "../assets/Skills/Next.js.png";
 import React_icon from "../assets/Skills/React.png";
 import Redux_icon from "../assets/Skills/Redux.png";
 import Sass_icon from "../assets/Skills/Sass.png";
@@ -87,6 +88,12 @@ export const resumeSkills: ISkill[] = [
     icon: TS_icon,
     proficiency: "Proficient",
     experience: "2 years",
+  },
+  {
+    name: "NextJS",
+    icon: NextIcon,
+    proficiency: "Amateur",
+    experience: "1 month",
   },
   {
     name: "ReactJS",
