@@ -24,12 +24,16 @@ const Home = () => {
             Hi, Im <strong>Adham Usama</strong>
           </h1>
           <p>
-            An ambitious young man from Egypt. I graduated from the{" "}
-            <span>faculty of engineering</span> as a computer and software
-            engineer and chose to follow my path as a{" "}
-            <span>front-end software developer</span> using <span>ReactJS</span>
-            . I put all my focus on becoming better and better at software
-            development.
+            I am a dedicated <span>NextJS</span>/<span>ReactJS</span> Front-end Developer with hands-on
+            experience in developing scalable web applications using modern
+            technologies like <span>HTML</span>, <span>CSS</span>, <span>TypeScript</span>, <span>ReactJS</span>, and <span>NodeJS</span>. I have
+            successfully contributed to several projects, including a real-time
+            virtual classroom platform and a book review website. My strengths
+            lie in <span>problem-solving</span> ,<span>clean code</span> practices, and collaborating with
+            cross-functional teams to deliver high-quality solutions. With a
+            passion for front-end development and a fast-learning mindset, I
+            thrive in dynamic environments that encourage innovation and
+            teamwork.
           </p>
         </div>
 
